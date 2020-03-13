@@ -7,29 +7,11 @@
     />
     <whats-new
       class="mb-4"
-      date=""
+      date="2020年3月9日"
       url="http://www.pref.hokkaido.lg.jp/ss/tkk/singatakoronahaien.htm"
-      text="北海道発表の新型コロナウイルス感染症に関する情報はこちら"
+      text="北海道における新型コロナウイルス感染症の検査陽性者の状況（R2.3.9現在）"
     />
-
     <v-row class="DataBlock">
-      <v-col cols="12" md="6" class="DataCard">
-          <DataView
-            title="検査陽性者の状況"
-            source-from="北海道 オープンデータポータル"
-            source-link="https://www.harp.lg.jp/opendata/dataset/1369.html"
-            date="2020/03/12"
-          >
-            <ConfiremCasesTable
-              :inspections="1250"
-              :nowpatients="71"
-              :currentpatients="128"
-              :milds="65"
-              :serious="6"
-              :losts="4"
-              :discharges="53" />
-          </DataView>
-      </v-col>
       <v-col cols="12" md="6" class="DataCard">
         <time-bar-chart
           title="現在患者数"
@@ -131,13 +113,9 @@ import formatGraph from '@/utils/formatGraph'
 import formatTable from '@/utils/formatTable'
 import SvgCard from '@/components/SvgCard.vue'
 import convertToDateFromData from '@/utils/convertToDateFromData'
-import DataView from "../components/DataView";
-import ConfiremCasesTable from "@/components/ConfiremCasesTable"
 
 export default {
   components: {
-    ConfiremCasesTable,
-    DataView,
     PageHeader,
     TimeBarChart,
     TimeStackedBarChart,
